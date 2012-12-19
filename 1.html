@@ -1,0 +1,338 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        #header_fixed {
+            background:#DDD;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+        }
+        .full_width{
+            width:100%;
+        }
+        .container{
+            margin: 0 auto;
+            text-align: center;
+            max-width: 960px;
+        }
+        .four.columns, .twelve.columns, .descripcion, .images {
+            display: inline-block;
+            text-align: left;
+            vertical-align: top;
+            margin:  1%;
+        }
+        .four.columns{
+            width: 22%; 
+        }
+        .twelve.columns{
+            width: 70%; 
+        }
+        nav ul{
+            list-style: none:
+        }
+        nav li{
+            display: inline-block;
+            margin: 1em;
+            
+        }
+        nav a{
+            padding: 0.5em;
+        }
+        #home, #about, #services, #portfolio, #blog, #contact{
+            padding-top: 100px;
+            min-height: 900px;
+            overflow: hidden;
+        }
+        #home h2, #about h2, #services h2, #portfolio h2, #blog h2, #contact h2{
+            text-align: right;
+        }
+        .portfolio-img{
+            background:red;
+                        
+        }
+        .portfolio-img a{
+            background:green;
+            display: block;
+            height: 100px;            
+            text-align: center;
+        }
+        .images {
+            background: #CCC;
+            width: 55%;
+            height: 300px;
+        }
+        .descripcion{
+            width: 38%;
+            padding: 1%;
+            margin: 1%;
+        }
+
+    </style>
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript">
+
+        $(document).on("ready",inicio);
+        $(document).on("ready",cerrar);
+        function inicio()
+        {
+            //AQUI VA EL CODIGO
+            $("a.MO").on("click", transicion);
+        }
+        function transicion(e)
+        {
+            //AQUI VA EL CODIGO
+            e.preventDefault();
+            // $('.slide').slideUp(1000); 
+            var i=0;
+           
+            var slideSelector = '#' + $(this).attr('id').replace('link', 'slide');
+             // $(slideSelector).slideDown(500);
+             if(i++ & 1) { 
+                  $('div.slide').not($(slideSelector)).slideUp(500, function() {
+                     $(slideSelector).slideDown(500, function() {
+                     $(slideSelector).animate({scrollTop: slideSelector.offset().top}, 300);
+                  });
+                  });
+              } else {
+                $('div.slide').not($(slideSelector)).slideUp(500, function() {
+                  $(slideSelector).slideDown(500);
+                });    
+              }
+            
+        }
+        
+        function cerrar()
+        {
+            //AQUI VA EL CODIGO
+            $("a.OM").on("click", cerrado);
+        }
+        function cerrado()
+        {
+            //AQUI VA EL CODIGO
+            $('.portfolio-details').slideUp(1000);
+        }
+        
+
+
+        
+
+      
+        
+           
+        
+    </script>
+</head>
+<body>
+    
+    <div id="header_fixed"  class="full_width">        
+        <div class="container">        
+            <!-- Logo -->
+            <div class="four columns">
+                    <a href="index.html">
+                        <h1 id="logo">LOGO</h1>
+                    </a>                    
+            </div>
+            <!-- /End Logo -->
+                
+            <!-- Menu -->
+            <nav id="menu" class="twelve columns">
+                
+                <ul class="original">
+                    <li><a  href="#home">Home</a></li> 
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>                        
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="container">
+        <div id="home">
+            <h2>Home</h2>
+            &nbsp;
+        </div>
+        <div id="about">
+            <h2>About</h2>
+            &nbsp;
+        </div>
+        <div id="services">
+            <h2>Services</h2>
+            &nbsp;
+        </div>
+        <div id="portfolio">
+            <h2>Portfolio</h2>
+            <div>
+                <div class="preview-proyectos">
+                    <div class="four columns">                                                        
+                        <div class="portfolio-img 1">
+                            <a id="link1" class=" MO" href="#"  title="Full Post"> Project 1</a>                                    
+                        </div>                                                
+                    </div>
+                    <div class="four columns">                                                        
+                        <div class="portfolio-img 1">
+                            <a id="link2" class=" MO" href="#"  title="Full Post"> Project 1</a>                                    
+                        </div>                                                
+                    </div>
+                    <div class="four columns">                                                        
+                        <div class="portfolio-img 1">
+                            <a id="link3" class=" MO" href="#"  title="Full Post"> Project 1</a>                                    
+                        </div>                                                
+                    </div>
+                    <div class="four columns">                                                        
+                        <div class="portfolio-img 1">
+                            <a id="link4" class=" MO" href="#"  title="Full Post"> Project 1</a>                                    
+                        </div>                                                
+                    </div>
+                </div>
+
+                <div class="detalles-proyectos">
+                    <div  id="slide1" class=" portfolio-details oculto slide"  style="display:none;  margin-bottom: 2em;">
+                        <div class="images">
+                            &nbsp;
+                                                                
+                        </div>
+                                    
+                        <div class="descripcion">
+                            <h3>Esta es la descripcion Proyecto 1</h3>
+                            <p>texto aleatorio como este texto aleatorio como este texto aleatorio como este 
+                            texto aleatorio como este texto aleatorio como este texto aleatorio como este </p>                        
+                        </div>                                        
+                        <a id="close-details" class="OM" href="#portfolio"  title="Full Post"> Ceeeeeerrar </a>
+                    </div>
+                    <div  id="slide2" class=" portfolio-details oculto slide"  style="display:none;  margin-bottom: 2em;">
+                        <div class="images">
+                            &nbsp;
+                                                                
+                        </div>
+                                    
+                        <div class="descripcion">
+                            <h3>Esta es la descripcion Proyecto 2</h3>
+                            <p>texto aleatorio como este texto aleatorio como este texto aleatorio como este 
+                            texto aleatorio como este texto aleatorio como este texto aleatorio como este </p>                        
+                        </div>                                        
+                        <a id="close-details" class="OM" href="#portfolio"  title="Full Post"> Ceeeeeerrar </a>
+                    </div>
+                    <div  id="slide3" class=" portfolio-details oculto slide"  style="display:none;  margin-bottom: 2em;">
+                        <div class="images">
+                            &nbsp;
+                                                                
+                        </div>
+                                    
+                        <div class="descripcion">
+                            <h3>Esta es la descripcion Proyecto 3</h3>
+                            <p>texto aleatorio como este texto aleatorio como este texto aleatorio como este 
+                            texto aleatorio como este texto aleatorio como este texto aleatorio como este </p>                        
+                        </div>                                        
+                        <a id="close-details" class="OM" href="#portfolio"  title="Full Post"> Ceeeeeerrar </a>
+                    </div>
+                    <div  id="slide4" class=" portfolio-details oculto slide"  style="display:none;  margin-bottom: 2em;">
+                        <div class="images">
+                            &nbsp;
+                                                                
+                        </div>
+                                    
+                        <div class="descripcion">
+                            <h3>Esta es la descripcion Proyecto 4</h3>
+                            <p>texto aleatorio como este texto aleatorio como este texto aleatorio como este 
+                            texto aleatorio como este texto aleatorio como este texto aleatorio como este </p>                        
+                        </div>                                        
+                        <a id="close-details" class="OM" href="#portfolio"  title="Full Post"> Ceeeeeerrar </a>
+                    </div>
+                </div>
+
+                    <div class="preview-proyectos">
+                    <div class="four columns">                                                        
+                        <div class="portfolio-img 1">
+                            <a id="link5" class=" MO" href="#"  title="Full Post"> Project 1</a>                                    
+                        </div>                                                
+                    </div>
+                    <div class="four columns">                                                        
+                        <div class="portfolio-img 1">
+                            <a id="link6" class=" MO" href="#"  title="Full Post"> Project 1</a>                                    
+                        </div>                                                
+                    </div>
+                    <div class="four columns">                                                        
+                        <div class="portfolio-img 1">
+                            <a id="link7" class=" MO" href="#"  title="Full Post"> Project 1</a>                                    
+                        </div>                                                
+                    </div>
+                    <div class="four columns">                                                        
+                        <div class="portfolio-img 1">
+                            <a id="link8" class=" MO" href="#"  title="Full Post"> Project 1</a>                                    
+                        </div>                                                
+                    </div>
+                </div>
+
+                <div class="detalles-proyectos">
+                    <div  id="slide5" class=" portfolio-details oculto slide"  style="display:none;  margin-bottom: 2em;">
+                        <div class="images">
+                            &nbsp;
+                                                                
+                        </div>
+                                    
+                        <div class="descripcion">
+                            <h3>Esta es la descripcion Proyecto 5</h3>
+                            <p>texto aleatorio como este texto aleatorio como este texto aleatorio como este 
+                            texto aleatorio como este texto aleatorio como este texto aleatorio como este </p>                        
+                        </div>                                        
+                        <a id="close-details" class="OM" href="#portfolio"  title="Full Post"> Ceeeeeerrar </a>
+                    </div>
+                    <div  id="slide6" class=" portfolio-details oculto slide"  style="display:none;  margin-bottom: 2em;">
+                        <div class="images">
+                            &nbsp;
+                                                                
+                        </div>
+                                    
+                        <div class="descripcion">
+                            <h3>Esta es la descripcion Proyecto 6</h3>
+                            <p>texto aleatorio como este texto aleatorio como este texto aleatorio como este 
+                            texto aleatorio como este texto aleatorio como este texto aleatorio como este </p>                        
+                        </div>                                        
+                        <a id="close-details" class="OM" href="#portfolio"  title="Full Post"> Ceeeeeerrar </a>
+                    </div>
+                    <div  id="slide7" class=" portfolio-details oculto slide"  style="display:none;  margin-bottom: 2em;">
+                        <div class="images">
+                            &nbsp;
+                                                                
+                        </div>
+                                    
+                        <div class="descripcion">
+                            <h3>Esta es la descripcion Proyecto 7</h3>
+                            <p>texto aleatorio como este texto aleatorio como este texto aleatorio como este 
+                            texto aleatorio como este texto aleatorio como este texto aleatorio como este </p>                        
+                        </div>                                        
+                        <a id="close-details" class="OM" href="#portfolio"  title="Full Post"> Ceeeeeerrar </a>
+                    </div>
+                    <div  id="slide8" class=" portfolio-details oculto slide"  style="display:none;  margin-bottom: 2em;">
+                        <div class="images">
+                            &nbsp;
+                                                                
+                        </div>
+                                    
+                        <div class="descripcion">
+                            <h3>Esta es la descripcion Proyecto 8</h3>
+                            <p>texto aleatorio como este texto aleatorio como este texto aleatorio como este 
+                            texto aleatorio como este texto aleatorio como este texto aleatorio como este </p>                        
+                        </div>                                        
+                        <a id="close-details" class="OM" href="#portfolio"  title="Full Post"> Ceeeeeerrar </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="blog">
+            <h2>Blog</h2>
+            &nbsp;
+        </div>
+        <div id="contact">
+            <h2>Contact</h2>
+            &nbsp;
+        </div>
+    </div>
+</body>
+</html>
