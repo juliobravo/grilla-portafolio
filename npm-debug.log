@@ -1,0 +1,91 @@
+Microsoft Windows [Versión 6.1.7600]
+Copyright (c) 2009 Microsoft Corporation. Reservados todos los derechos.
+
+C:\Windows\system32>cd C:\Program Files\nodejs
+
+C:\Program Files\nodejs>npm install socket.io
+npm http GET https://registry.npmjs.org/socket.io
+npm http 304 https://registry.npmjs.org/socket.io
+npm http GET https://registry.npmjs.org/base64id/0.1.0
+npm http GET https://registry.npmjs.org/policyfile/0.0.4
+npm http GET https://registry.npmjs.org/socket.io-client/0.9.11
+npm http GET https://registry.npmjs.org/redis/0.7.3
+npm http 304 https://registry.npmjs.org/base64id/0.1.0
+npm http 304 https://registry.npmjs.org/policyfile/0.0.4
+npm http 304 https://registry.npmjs.org/socket.io-client/0.9.11
+npm http 304 https://registry.npmjs.org/redis/0.7.3
+npm http GET https://registry.npmjs.org/uglify-js/1.2.5
+npm http GET https://registry.npmjs.org/active-x-obfuscator/0.0.1
+npm http GET https://registry.npmjs.org/xmlhttprequest/1.4.2
+npm http GET https://registry.npmjs.org/ws
+npm http 304 https://registry.npmjs.org/uglify-js/1.2.5
+npm http 304 https://registry.npmjs.org/active-x-obfuscator/0.0.1
+npm http 304 https://registry.npmjs.org/xmlhttprequest/1.4.2
+npm http 304 https://registry.npmjs.org/ws
+npm http GET https://registry.npmjs.org/zeparser/0.0.5
+npm http GET https://registry.npmjs.org/tinycolor
+npm http GET https://registry.npmjs.org/options
+npm http GET https://registry.npmjs.org/commander
+npm http 304 https://registry.npmjs.org/zeparser/0.0.5
+npm http 304 https://registry.npmjs.org/tinycolor
+npm http 304 https://registry.npmjs.org/options
+npm http 304 https://registry.npmjs.org/commander
+
+> ws@0.4.25 install C:\Program Files\nodejs\node_modules\socket.io\node_modules\
+socket.io-client\node_modules\ws
+> (node-gyp rebuild 2> builderror.log) || (exit 0)
+
+
+C:\Program Files\nodejs\node_modules\socket.io\node_modules\socket.io-client\nod
+e_modules\ws>node "C:\Program Files\nodejs\node_modules\npm\bin\node-gyp-bin\\..
+\..\node_modules\node-gyp\bin\node-gyp.js" rebuild
+  bufferutil.cc
+..\src\bufferutil.cc(55): warning C4267: 'inicializando' : conversión de 'size_
+t' a 'unsigned int'; posible pérdida de datos [C:\Program Files\nodejs\node_mod
+ules\socket.io\node_modules\socket.io-client\node_modules\ws\build\bufferutil.v
+cxproj]
+..\src\bufferutil.cc(66): warning C4267: 'inicializando' : conversión de 'size_
+t' a 'unsigned int'; posible pérdida de datos [C:\Program Files\nodejs\node_mod
+ules\socket.io\node_modules\socket.io-client\node_modules\ws\build\bufferutil.v
+cxproj]
+C:\Users\user\.node-gyp\0.8.16\deps\v8\include\v8.h(183): warning C4506: no hay
+ una definición para la función inline 'v8::Persistent<T> v8::Persistent<T>::Ne
+w(v8::Handle<T>)' [C:\Program Files\nodejs\node_modules\socket.io\node_modules\
+socket.io-client\node_modules\ws\build\bufferutil.vcxproj]
+          with
+          [
+              T=v8::Object
+          ]
+     Creando biblioteca C:\Program Files\nodejs\node_modules\socket.io\node_mod
+  ules\socket.io-client\node_modules\ws\build\Release\bufferutil.lib y objeto C
+  :\Program Files\nodejs\node_modules\socket.io\node_modules\socket.io-client\n
+  ode_modules\ws\build\Release\bufferutil.exp
+  Generando c¾digo
+  Generaci¾n de c¾digo finalizada
+  bufferutil.vcxproj -> C:\Program Files\nodejs\node_modules\socket.io\node_mod
+  ules\socket.io-client\node_modules\ws\build\Release\\bufferutil.node
+  validation.cc
+C:\Users\user\.node-gyp\0.8.16\deps\v8\include\v8.h(183): warning C4506: no hay
+ una definición para la función inline 'v8::Persistent<T> v8::Persistent<T>::Ne
+w(v8::Handle<T>)' [C:\Program Files\nodejs\node_modules\socket.io\node_modules\
+socket.io-client\node_modules\ws\build\validation.vcxproj]
+          with
+          [
+              T=v8::Object
+          ]
+     Creando biblioteca C:\Program Files\nodejs\node_modules\socket.io\node_mod
+  ules\socket.io-client\node_modules\ws\build\Release\validation.lib y objeto C
+  :\Program Files\nodejs\node_modules\socket.io\node_modules\socket.io-client\n
+  ode_modules\ws\build\Release\validation.exp
+  Generando c¾digo
+  Generaci¾n de c¾digo finalizada
+  validation.vcxproj -> C:\Program Files\nodejs\node_modules\socket.io\node_mod
+  ules\socket.io-client\node_modules\ws\build\Release\\validation.node
+socket.io@0.9.13 node_modules\socket.io
++-- base64id@0.1.0
++-- policyfile@0.0.4
++-- redis@0.7.3
++-- socket.io-client@0.9.11 (xmlhttprequest@1.4.2, uglify-js@1.2.5, active-x-obf
+uscator@0.0.1, ws@0.4.25)
+
+C:\Program Files\nodejs>
